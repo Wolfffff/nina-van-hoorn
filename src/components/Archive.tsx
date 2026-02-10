@@ -1,4 +1,3 @@
-import React from 'react';
 import { allProjects } from '../lib/content';
 import { ArtImage } from './ArtImage';
 import { thumbUrl } from '../lib/assets';

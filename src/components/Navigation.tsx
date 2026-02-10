@@ -35,31 +35,31 @@ export function Navigation({ currentPage }: NavigationProps) {
       initial={{ y: 0 }}
       animate={{ y: isVisible ? 0 : -100 }}
       transition={{ duration: 0.3, ease: 'easeInOut' }}
-      className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-sm border-b border-neutral-200"
+      className="fixed top-0 left-0 right-0 z-50 bg-white"
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         <a
           href={withBase('/')}
           onClick={(e) => handleClick(e, '/')}
-          className="text-xl md:text-2xl uppercase tracking-tight hover:opacity-70 transition-opacity"
+          className="text-sm uppercase tracking-[0.2em] text-neutral-600 hover:text-[var(--color-accent-red)] transition-colors"
         >
           Nina van Hoorn
         </a>
 
-        <div className="flex gap-6 md:gap-8">
+        <div className="flex gap-5">
           <a
             href={withBase('/')}
             onClick={(e) => handleClick(e, '/')}
-            className="text-sm md:text-base uppercase tracking-wide transition-colors"
-            style={{ color: currentPage === 'home' ? 'var(--color-accent-red)' : '#a3a3a3' }}
+            className="text-xs uppercase tracking-[0.2em] transition-colors"
+            style={{ color: currentPage === 'home' ? 'var(--color-accent-red)' : '#737373', fontWeight: 400 }}
           >
             Work
           </a>
           <a
             href={withBase('/about')}
             onClick={(e) => handleClick(e, '/about')}
-            className="text-sm md:text-base uppercase tracking-wide transition-colors"
-            style={{ color: currentPage === 'about' ? 'var(--color-accent-red)' : '#a3a3a3' }}
+            className="text-xs uppercase tracking-[0.2em] transition-colors"
+            style={{ color: currentPage === 'about' ? 'var(--color-accent-red)' : '#737373', fontWeight: 400 }}
           >
             About
           </a>

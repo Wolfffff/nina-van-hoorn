@@ -147,10 +147,4 @@ export const allProjects: Project[] = Object.entries(projectModules)
     return a.title.localeCompare(b.title);
   });
 
-/**
- * Load all projects (async wrapper kept for backwards compatibility).
- */
-export async function loadProjects(): Promise<Project[]> {
-  return allProjects;
-}
 

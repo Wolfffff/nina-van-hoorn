@@ -1,19 +1,12 @@
-import React, { useEffect, useState } from 'react';
 import { motion } from 'motion/react';
 import { ArtImage } from './ArtImage';
-import { loadProjects, type Project } from '../lib/content';
+import { allProjects } from '../lib/content';
 import { navigate } from '../lib/router';
 import { thumbUrl } from '../lib/assets';
 
+const projects = allProjects.filter((p) => p.featured);
 
 export function About() {
-  const [projects, setProjects] = useState<Project[]>([]);
-
-  useEffect(() => {
-    loadProjects().then((all) => {
-      setProjects(all.filter((p) => p.featured));
-    });
-  }, []);
 
   return (
     <div className="pt-20">

@@ -1,4 +1,3 @@
-import React from 'react';
 import { motion } from 'motion/react';
 import { ProjectCard } from './ProjectCard';
 import { allProjects, type Project } from '../lib/content';

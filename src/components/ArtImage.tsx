@@ -1,18 +1,11 @@
-import React, { useState } from 'react';
+import { useState, type ImgHTMLAttributes } from 'react';
 import { assetUrl } from '../lib/assets';
 
 /**
  * Image component with graceful fallback for missing local images.
- *
- * When the image hasn't been added yet (e.g. /images/projects/slug/01.jpg
- * doesn't exist), it renders a clean neutral placeholder that maintains
- * the parent's aspect ratio.
- *
- * Usage:
- *   <ArtImage src="/images/projects/coastal/01.jpg" alt="Coastal print" className="w-full h-full object-cover" />
  */
 
-interface ArtImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
+interface ArtImageProps extends ImgHTMLAttributes<HTMLImageElement> {
   src: string;
   alt: string;
 }

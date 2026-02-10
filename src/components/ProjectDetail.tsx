@@ -2,7 +2,7 @@ import React from 'react';
 import { motion, useDragControls } from 'motion/react';
 import { X } from 'lucide-react';
 import type { Project } from '../lib/content';
-import { preloadImage } from '../lib/assets';
+import { preloadImage, assetUrl } from '../lib/assets';
 
 interface ProjectDetailProps {
   project: Project;
@@ -160,7 +160,7 @@ export function ProjectDetail({ project, onClose }: ProjectDetailProps) {
         {/* Thumbnail */}
         <div className="mb-16 md:mb-20">
           <img
-            src={project.thumbnail}
+            src={assetUrl(project.thumbnail)}
             alt={project.title}
             className="w-full h-auto"
             // @ts-expect-error React 18 fetchPriority casing
@@ -192,7 +192,7 @@ export function ProjectDetail({ project, onClose }: ProjectDetailProps) {
                   transition={{ duration: 0.5 }}
                 >
                   <img
-                    src={block.src}
+                    src={assetUrl(block.src)}
                     alt={block.alt}
                     className="w-full h-auto"
                     decoding="async"

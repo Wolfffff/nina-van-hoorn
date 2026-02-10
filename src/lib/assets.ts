@@ -16,9 +16,10 @@ const preloaded = new Set<string>();
 
 /** Preload an image into the browser cache. */
 export function preloadImage(src: string) {
-  if (!src || preloaded.has(src)) return;
-  preloaded.add(src);
+  const resolved = assetUrl(src);
+  if (!resolved || preloaded.has(resolved)) return;
+  preloaded.add(resolved);
   const img = new Image();
-  img.src = src;
+  img.src = resolved;
 }
 

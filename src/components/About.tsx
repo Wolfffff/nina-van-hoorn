@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 import { ArtImage } from './ArtImage';
 import { loadProjects, type Project } from '../lib/content';
 import { navigate } from '../lib/router';
-import { assetUrl } from '../lib/assets';
+
 
 export function About() {
   const [projects, setProjects] = useState<Project[]>([]);
@@ -19,16 +19,16 @@ export function About() {
       {/* Hero Section with Portrait */}
       <section className="relative overflow-hidden">
         {/* Desktop layout */}
-        <div className="desktop-only" style={{ minHeight: '100vh', alignItems: 'center' }}>
-          <div className="max-w-7xl w-full mx-auto px-6 py-20">
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '64px', alignItems: 'stretch' }}>
+        <div className="desktop-only" style={{ alignItems: 'center' }}>
+          <div className="max-w-7xl w-full mx-auto px-6 py-24">
+            <div style={{ display: 'grid', gridTemplateColumns: '3fr 2fr', gap: '64px', alignItems: 'center' }}>
               <motion.div
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
-                style={{ display: 'flex', flexDirection: 'column', gap: '32px', justifyContent: 'center' }}
+                style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}
               >
-                <h1 className="uppercase tracking-tight" style={{ fontSize: '6rem', lineHeight: '0.9' }}>About</h1>
+                <h1 className="uppercase tracking-tight" style={{ fontSize: '4rem', lineHeight: '0.9' }}>About</h1>
                 <div className="space-y-4 text-lg text-neutral-700 max-w-xl">
                   <p>
                     I'm Nina van Hoorn, a visual artist based in Princeton, New Jersey. My practice spans
@@ -58,8 +58,8 @@ export function About() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-                <div className="relative overflow-hidden" style={{ height: '100%' }}>
-                  <ArtImage src={assetUrl("/images/portrait.jpeg")} alt="Nina van Hoorn" className="w-full h-full object-cover" />
+                <div className="relative overflow-hidden" style={{ aspectRatio: '3/4' }}>
+                  <ArtImage src={"/images/portrait.jpeg"} alt="Nina van Hoorn" className="w-full h-full object-cover" />
                 </div>
               </motion.div>
             </div>
@@ -75,7 +75,7 @@ export function About() {
           >
             <div className="about-portrait-float">
               <div className="relative overflow-hidden" style={{ aspectRatio: '3/4' }}>
-                <ArtImage src={assetUrl("/images/portrait.jpeg")} alt="Nina van Hoorn" className="w-full h-full object-cover" />
+                <ArtImage src={"/images/portrait.jpeg"} alt="Nina van Hoorn" className="w-full h-full object-cover" />
               </div>
             </div>
             <h1 className="text-5xl md:text-7xl uppercase tracking-tight leading-[0.9] mb-4">About</h1>

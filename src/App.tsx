@@ -10,7 +10,7 @@ import { ProjectDetail } from './components/ProjectDetail';
 import { Footer } from './components/Footer';
 import { useRoute, navigate } from './lib/router';
 import { allProjects } from './lib/content';
-import { preloadImage } from './lib/assets';
+
 
 export default function App() {
   const route = useRoute();
@@ -32,13 +32,6 @@ export default function App() {
     }
   }, []);
 
-  // Background-preload all full-size project thumbnails once page is idle
-  React.useEffect(() => {
-    const id = setTimeout(() => {
-      allProjects.forEach(p => preloadImage(p.thumbnail));
-    }, 2000);
-    return () => clearTimeout(id);
-  }, []);
 
   const selectedProject = route.page === 'project' && route.slug
     ? allProjects.find(p => p.slug === route.slug) || null

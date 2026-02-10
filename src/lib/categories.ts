@@ -1,4 +1,4 @@
-import { assetUrl } from './assets';
+import { assetUrl, thumbUrl } from './assets';
 
 export interface CategoryInfo {
   name: string;
@@ -10,22 +10,22 @@ export const categories: CategoryInfo[] = [
   {
     name: 'Printmaking',
     slug: 'printmaking',
-    image: assetUrl('/images/projects/coastal-linocuts/coastal-warm.jpg'),
+    image: assetUrl(thumbUrl('/images/projects/coastal-linocuts/coastal-warm.jpg')),
   },
   {
     name: 'Drawing',
     slug: 'drawing',
-    image: assetUrl('/images/projects/sketchbook/full-spread.jpg'),
+    image: assetUrl(thumbUrl('/images/projects/sketchbook/full-spread.jpg')),
   },
   {
     name: 'Mixed Media',
     slug: 'mixed-media',
-    image: assetUrl('/images/projects/paper-botanicals/lilypad-front.jpg'),
+    image: assetUrl(thumbUrl('/images/projects/paper-botanicals/lilypad-front.jpg')),
   },
   {
     name: 'Photography',
     slug: 'photography',
-    image: assetUrl('/images/projects/architecture-photography/arc-de-triomphe.jpg'),
+    image: assetUrl(thumbUrl('/images/projects/architecture-photography/arc-de-triomphe.jpg')),
   },
 ];
 

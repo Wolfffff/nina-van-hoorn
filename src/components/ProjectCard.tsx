@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
+import { assetUrl, thumbUrl } from '../lib/assets';
 
 interface Project {
   id: string;
@@ -29,9 +30,10 @@ export function ProjectCard({ project, index, onClick }: ProjectCardProps) {
     >
       <div className="relative overflow-hidden bg-neutral-50" style={{ height: '100%' }}>
         <img
-          src={project.thumbnail}
+          src={assetUrl(thumbUrl(project.thumbnail))}
           alt={project.title}
           className="w-full h-full object-cover"
+          loading="lazy"
         />
 
         {/* Hover overlay */}

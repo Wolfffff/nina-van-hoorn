@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { ArtImage } from './ArtImage';
 import { loadProjects, type Project } from '../lib/content';
 import { navigate } from '../lib/router';
+import { thumbUrl } from '../lib/assets';
 
 
 export function About() {
@@ -32,25 +33,19 @@ export function About() {
                 <div className="space-y-4 text-lg text-neutral-700 max-w-xl">
                   <p>
                     I'm Nina van Hoorn, a visual artist based in Princeton, New Jersey. My practice spans
-                    printmaking, analog photography, and painting — mediums that share a tactile,
-                    process-driven approach to image-making.
+                    printmaking, analog photography, and painting — lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   </p>
                   <p>
-                    I'm drawn to the physicality of these techniques: the pressure of the printing
-                    press, the chemistry of the darkroom, the layering of paint. Each medium offers
-                    a different way to explore themes of landscape, memory, and texture.
+                    lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   </p>
                   <p>
-                    My work often begins with observation — walks along the Jersey Shore, wandering
-                    through urban spaces, studying botanical specimens. These experiences are
-                    translated through slow, deliberate processes that reveal unexpected textures
-                    and forms.
+                    lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   </p>
                 </div>
                 <div className="space-y-2 text-base pt-4">
                   <p className="text-neutral-600"><span className="text-neutral-900">Based in:</span> Princeton, NJ</p>
                   <p className="text-neutral-600"><span className="text-neutral-900">Education:</span> Skidmore College</p>
-                  <p className="text-neutral-600"><span className="text-neutral-900">Contact:</span> contact@ninavanhoorn.com</p>
+                  <p className="text-neutral-600"><span className="text-neutral-900">Contact:</span> contact@contact.com</p>
                 </div>
               </motion.div>
               <motion.div
@@ -146,7 +141,7 @@ export function About() {
             >
               <div className="relative overflow-hidden bg-neutral-50" style={{ height: '100%' }}>
                 <ArtImage
-                  src={project.thumbnail}
+                  src={thumbUrl(project.thumbnail)}
                   alt={project.title}
                   className="w-full h-full object-cover"
                 />

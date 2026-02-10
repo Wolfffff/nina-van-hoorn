@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { assetUrl } from '../lib/assets';
 
-const heroImage = assetUrl('/images/hero.jpg');
+const heroImage = assetUrl('/images/hero-medium.jpg');
 
 export function Hero() {
   return (
@@ -56,7 +56,7 @@ export function Hero() {
                 </p>
                 <div className="mt-6 pt-6 border-t border-neutral-200">
                   <p className="text-sm md:text-base text-neutral-600">
-                    Working across traditional mediums to explore landscape, memory, and texture
+                    lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   </p>
                 </div>
               </div>

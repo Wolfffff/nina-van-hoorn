@@ -11,10 +11,10 @@ thumbnail: "/images/projects/alcatraz/etching.jpg"
 
 # Alcatraz
 
-Prints of Alcatraz Island's industrial architecture — an etching and a linocut working from the same photographic reference to capture the layered, weathered structures.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
 ![Alcatraz etching, intaglio print](/images/projects/alcatraz/etching.jpg)
 
-The linocut version alongside the source photograph. The translation from photo to carved block strips away detail and flattens the image into bold lines and planes.
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
 ![Reference photo and linocut side by side](/images/projects/alcatraz/photo-and-linocut.jpg)

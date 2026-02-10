@@ -11,18 +11,18 @@ thumbnail: "/images/projects/classical-studies/angel-close.jpg"
 
 # Classical Studies
 
-Detailed pencil drawings of classical sculpture — angels, draped figures, and value studies from observation.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
 ![Angel sculpture, close-up pencil drawing](/images/projects/classical-studies/angel-close.jpg)
 
 ![Angel sculpture, full view](/images/projects/classical-studies/angel-full.jpg)
 
-Pencil sketches of reclining classical figures, drawn on found paper.
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
 
 ![Sculpture sketch, reclining figure](/images/projects/classical-studies/sculpture-sketch-a.jpg)
 
 ![Sculpture sketch, detail](/images/projects/classical-studies/sculpture-sketch-b.jpg)
 
-A grisaille value study of geometric forms — eggs and cubes on a tonal ground.
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 
 ![Value study, eggs and cubes](/images/projects/classical-studies/value-study.jpg)

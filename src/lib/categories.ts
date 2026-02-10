@@ -23,6 +23,11 @@ export const categories: CategoryInfo[] = [
     image: assetUrl(thumbUrl('/images/projects/paper-botanicals/lilypad-front.jpg')),
   },
   {
+    name: 'Painting',
+    slug: 'painting',
+    image: assetUrl(thumbUrl('/images/projects/painting/painting-01.jpg')),
+  },
+  {
     name: 'Photography',
     slug: 'photography',
     image: assetUrl(thumbUrl('/images/projects/architecture-photography/arc-de-triomphe.jpg')),

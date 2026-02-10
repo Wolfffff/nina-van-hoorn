@@ -5,6 +5,7 @@ import { Hero } from './components/Hero';
 import { ProjectGrid } from './components/ProjectGrid';
 import { SectionNav } from './components/SectionNav';
 import { About } from './components/About';
+import { Archive } from './components/Archive';
 import { ProjectDetail } from './components/ProjectDetail';
 import { Footer } from './components/Footer';
 import { useRoute } from './lib/router';
@@ -36,6 +37,8 @@ export default function App() {
 
       {route.page === 'about' ? (
         <About />
+      ) : route.page === 'archive' ? (
+        <Archive />
       ) : (
         <>
           <Hero />

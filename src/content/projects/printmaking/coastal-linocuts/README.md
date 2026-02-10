@@ -11,16 +11,16 @@ thumbnail: "/images/projects/coastal-linocuts/coastal-warm.jpg"
 
 # Coastal Linocuts
 
-Multi-color reduction linocuts of the California coast — wildflower meadows giving way to rocky shoreline, sea stacks, and birds in flight.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
 ![Coastal scene, warm sunset palette](/images/projects/coastal-linocuts/coastal-warm.jpg)
 
-The same carved block printed in different color passes produces distinct moods. A warm ochre-to-green palette evokes late afternoon light, while a blue-green version shifts the same landscape toward cooler, overcast conditions.
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
 
 ![Coastal scene, blue and green palette](/images/projects/coastal-linocuts/coastal-blue-green.jpg)
 
 ![Coastal scene, green palette](/images/projects/coastal-linocuts/coastal-green.jpg)
 
-The carved woodblock itself — the matrix from which each print is pulled. The detailed carving of wildflowers, grasses, and rock formations is visible in the raw wood surface.
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 ![Carved woodblock](/images/projects/coastal-linocuts/carved-block.jpg)

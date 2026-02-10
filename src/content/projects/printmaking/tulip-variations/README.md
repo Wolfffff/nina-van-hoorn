@@ -11,37 +11,37 @@ thumbnail: "/images/projects/tulip-variations/clean-bw.jpg"
 
 # Tulip Variations
 
-A single linocut block of tulips in a vase, explored through different printing and collage techniques — each pull a new interpretation of the same carved image.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
 ![Tulips, clean black and white](/images/projects/tulip-variations/clean-bw.jpg)
 
-The black-and-white pull is the starting point: the carved image in its simplest form.
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
 
 ![Tulips, black and white variant](/images/projects/tulip-variations/black-white.jpg)
 
-Chine-collé with gold and tan tissue adds warmth and depth to the same impression.
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
 
-![Tulips with chine-collé](/images/projects/tulip-variations/chine-colle.jpg)
+![Tulips with chine-colle](/images/projects/tulip-variations/chine-colle.jpg)
 
-Color paper collage transforms the print into something closer to painting — blocks of blue, brown, orange, and pink layered over and around the image.
+Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 ![Tulips with color collage](/images/projects/tulip-variations/color-collage.jpg)
 
-Printed on translucent tissue paper, the image becomes fragile and luminous.
+Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
 
 ![Tulips on tissue paper](/images/projects/tulip-variations/tissue-paper.jpg)
 
-Printed on a page from a Danish book, the text bleeding through the image.
+Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.
 
 ![Tulips on book page](/images/projects/tulip-variations/book-page.jpg)
 
 ![Tulips on book page, color variant](/images/projects/tulip-variations/variant-b.jpg)
 
-Printed on a torn road map, the geography of the page merging with the botanical subject.
+Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.
 
 ![Tulips on map collage](/images/projects/tulip-variations/map-collage.jpg)
 
-A watercolor wash of peach and orange applied over the print.
+At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium.
 
 ![Tulips with watercolor wash](/images/projects/tulip-variations/watercolor-wash.jpg)
 

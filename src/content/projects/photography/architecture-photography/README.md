@@ -11,6 +11,6 @@ thumbnail: "/images/projects/architecture-photography/arc-de-triomphe.jpg"
 
 # Architecture Photography
 
-Architectural photography — monumental structures captured from unexpected angles.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
 ![Arc de Triomphe, looking up from beneath](/images/projects/architecture-photography/arc-de-triomphe.jpg)

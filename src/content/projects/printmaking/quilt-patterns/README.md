@@ -11,10 +11,10 @@ thumbnail: "/images/projects/quilt-patterns/star-orange.jpg"
 
 # Quilt Patterns
 
-Bold geometric linocuts based on traditional quilt block designs — star patterns carved with detailed interior line work and printed in saturated single colors.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
 ![Quilt star pattern, orange](/images/projects/quilt-patterns/star-orange.jpg)
 
-The same block printed in deep blue shifts the character entirely — from warm and textile-like to cool and graphic.
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
 ![Quilt star pattern, blue](/images/projects/quilt-patterns/star-blue.jpg)

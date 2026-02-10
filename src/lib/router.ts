@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 const BASE = import.meta.env.BASE_URL.replace(/\/$/, ''); // e.g. '/nina-van-hoorn' or ''
 
 interface RouteMatch {
-  page: 'home' | 'about' | 'project';
+  page: 'home' | 'about' | 'archive' | 'project';
   slug?: string;
 }
 
@@ -16,6 +16,7 @@ function stripBase(pathname: string): string {
 export function parseRoute(pathname: string): RouteMatch {
   const path = stripBase(pathname);
   if (path === '/about') return { page: 'about' };
+  if (path === '/archive') return { page: 'archive' };
   const projectMatch = path.match(/^\/project\/([^/]+)$/);
   if (projectMatch) return { page: 'project', slug: projectMatch[1] };
   return { page: 'home' };

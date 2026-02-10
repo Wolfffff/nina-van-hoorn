@@ -11,11 +11,11 @@ thumbnail: "/images/projects/sketchbook/full-spread.jpg"
 
 # Sketchbook
 
-Mixed-media sketchbook spreads — portraits, figures, animals, collage, and observational studies in pencil, ink, gouache, and watercolor.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
 ![Sketchbook spread with portraits, collage, and mixed media](/images/projects/sketchbook/spread-collage.jpg)
 
-A Van Gogh postman study — the painted portrait alongside the original reference, exploring color and brushwork.
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
 ![Van Gogh postman portrait study](/images/projects/sketchbook/van-gogh-study.jpg)
 

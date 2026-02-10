@@ -11,13 +11,13 @@ thumbnail: "/images/projects/paper-botanicals/lilypad-front.jpg"
 
 # Paper Botanicals
 
-Paper-cut botanical designs — lily pad and leaf forms hand-cut from heavy paper, constructed as dimensional accordion-fold structures.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
 ![Paper-cut lily pad design, front view](/images/projects/paper-botanicals/lilypad-front.jpg)
 
 ![Paper-cut botanical, angled view](/images/projects/paper-botanicals/lilypad-angle.jpg)
 
-The pieces fold and unfold to reveal different compositions depending on the viewing angle.
+Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 
 ![Paper-cut botanical, folded view](/images/projects/paper-botanicals/lilypad-fold.jpg)
 

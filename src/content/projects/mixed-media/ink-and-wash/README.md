@@ -11,6 +11,6 @@ thumbnail: "/images/projects/ink-and-wash/red-hand.jpg"
 
 # Ink & Wash
 
-Ink line drawings combined with bold watercolor washes — graphic, high-contrast studies of the human form.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
 ![Hand reaching upward against red circle](/images/projects/ink-and-wash/red-hand.jpg)

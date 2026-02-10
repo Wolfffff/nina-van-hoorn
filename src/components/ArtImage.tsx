@@ -19,6 +19,7 @@ interface ArtImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
 
 export function ArtImage({ src, alt, className = '', style, ...props }: ArtImageProps) {
   const [hasError, setHasError] = useState(false);
+  const [loaded, setLoaded] = useState(false);
   const resolvedSrc = assetUrl(src);
 
   if (hasError || !src) {
@@ -43,7 +44,12 @@ export function ArtImage({ src, alt, className = '', style, ...props }: ArtImage
       src={resolvedSrc}
       alt={alt}
       className={className}
-      style={style}
+      style={{
+        ...style,
+        opacity: loaded ? 1 : 0,
+        transition: 'opacity 0.3s ease-in',
+      }}
+      onLoad={() => setLoaded(true)}
       onError={() => setHasError(true)}
       loading="lazy"
       {...props}

@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { assetUrl } from '../lib/assets';
 
-const heroImage = assetUrl('/images/hero.png');
+const heroImage = assetUrl('/images/hero.jpg');
 
 export function Hero() {
   return (
@@ -13,6 +13,7 @@ export function Hero() {
           src={heroImage}
           alt="Nina van Hoorn artwork"
           className="w-full h-full object-cover"
+          fetchPriority="high"
         />
       </div>
       

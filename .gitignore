@@ -1,0 +1,22 @@
+node_modules/
+build/
+dist/
+.DS_Store
+*.local
+*.log
+
+# Figma export artifacts
+canvas.fig
+thumbnail.png
+meta.json
+ai_chat.json
+/images/
+blob_store/
+NvH-dev.make
+
+# Raw source images (served from public/ after conversion)
+raw_data/
+
+# Claude
+CLAUDE.md
+.claude/

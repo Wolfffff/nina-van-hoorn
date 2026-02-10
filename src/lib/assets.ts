@@ -12,6 +12,11 @@ export function thumbUrl(path: string): string {
   return path.replace(/(\.\w+)$/, '-thumb$1');
 }
 
+/** Return the -medium variant of an image path (1200px wide). */
+export function mediumUrl(path: string): string {
+  return path.replace(/(\.\w+)$/, '-medium$1');
+}
+
 const preloaded = new Set<string>();
 
 /** Preload an image into the browser cache. */

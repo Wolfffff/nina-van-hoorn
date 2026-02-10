@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 import { allProjects } from '../lib/content';
 import { categories } from '../lib/categories';
 import { ArtImage } from './ArtImage';
-import { thumbUrl, preloadImage } from '../lib/assets';
+import { thumbUrl, mediumUrl, preloadImage } from '../lib/assets';
 import { navigate } from '../lib/router';
 import { ChevronDown } from 'lucide-react';
 
@@ -140,7 +140,8 @@ export function Timeline() {
                       e.preventDefault();
                       navigate(`/project/${project.slug}`);
                     }}
-                    onPointerEnter={() => preloadImage(project.thumbnail)}
+                    onPointerEnter={() => preloadImage(mediumUrl(project.thumbnail))}
+                    onPointerDown={() => preloadImage(mediumUrl(project.thumbnail))}
                     className="group cursor-pointer"
                     initial={{ opacity: 0, y: 24 }}
                     whileInView={{ opacity: 1, y: 0 }}

@@ -2,7 +2,7 @@ import React from 'react';
 import { motion, useDragControls } from 'motion/react';
 import { X } from 'lucide-react';
 import type { Project } from '../lib/content';
-import { preloadImage, assetUrl } from '../lib/assets';
+import { preloadImage, assetUrl, mediumUrl } from '../lib/assets';
 
 interface ProjectDetailProps {
   project: Project;
@@ -87,7 +87,7 @@ export function ProjectDetail({ project, onClose }: ProjectDetailProps) {
     const imgRegex = /!\[[^\]]*\]\(([^)]+)\)/g;
     let match;
     while ((match = imgRegex.exec(project.content)) !== null) {
-      preloadImage(match[1]);
+      preloadImage(mediumUrl(match[1]));
     }
   }, [project.content]);
 
@@ -160,7 +160,7 @@ export function ProjectDetail({ project, onClose }: ProjectDetailProps) {
         {/* Thumbnail */}
         <div className="mb-16 md:mb-20">
           <img
-            src={assetUrl(project.thumbnail)}
+            src={assetUrl(mediumUrl(project.thumbnail))}
             alt={project.title}
             className="w-full h-auto"
             // @ts-expect-error React 18 fetchPriority casing
@@ -192,7 +192,7 @@ export function ProjectDetail({ project, onClose }: ProjectDetailProps) {
                   transition={{ duration: 0.5 }}
                 >
                   <img
-                    src={assetUrl(block.src)}
+                    src={assetUrl(mediumUrl(block.src))}
                     alt={block.alt}
                     className="w-full h-auto"
                     decoding="async"

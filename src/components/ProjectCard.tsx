@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { assetUrl, thumbUrl, preloadImage } from '../lib/assets';
+import { assetUrl, thumbUrl, mediumUrl, preloadImage } from '../lib/assets';
 
 interface Project {
   id: string;
@@ -26,7 +26,8 @@ export function ProjectCard({ project, index, onClick }: ProjectCardProps) {
       transition={{ duration: 0.7, delay: index * 0.08, ease: [0.25, 0.1, 0.25, 1] }}
       className="group cursor-pointer"
       onClick={onClick}
-      onPointerEnter={() => preloadImage(project.thumbnail)}
+      onPointerEnter={() => preloadImage(mediumUrl(project.thumbnail))}
+      onPointerDown={() => preloadImage(mediumUrl(project.thumbnail))}
       style={{ height: '100%' }}
     >
       <div className="relative overflow-hidden bg-neutral-50" style={{ height: '100%' }}>

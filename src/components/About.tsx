@@ -68,26 +68,19 @@ export function About() {
             </div>
             <h1 className="text-5xl md:text-7xl uppercase tracking-tight leading-[0.9] mb-4">About</h1>
             <p className="text-base md:text-lg text-neutral-700 mb-3">
-              I'm Nina van Hoorn, a visual artist based in Princeton, New Jersey. My practice spans
-              printmaking, analog photography, and painting — mediums that share a tactile,
-              process-driven approach to image-making.
+              I'm Nina van Hoorn, a visual artist based in Princeton, New Jersey. lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
             <p className="text-base md:text-lg text-neutral-700 mb-3">
-              I'm drawn to the physicality of these techniques: the pressure of the printing
-              press, the chemistry of the darkroom, the layering of paint. Each medium offers
-              a different way to explore themes of landscape, memory, and texture.
+              lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
             <p className="text-base md:text-lg text-neutral-700 mb-3">
-              My work often begins with observation — walks along the Jersey Shore, wandering
-              through urban spaces, studying botanical specimens. These experiences are
-              translated through slow, deliberate processes that reveal unexpected textures
-              and forms.
+              lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
             <div className="clear-both" />
             <div className="space-y-2 text-sm md:text-base pt-4">
               <p className="text-neutral-600"><span className="text-neutral-900">Based in:</span> Princeton, NJ</p>
               <p className="text-neutral-600"><span className="text-neutral-900">Education:</span> Skidmore College</p>
-              <p className="text-neutral-600"><span className="text-neutral-900">Contact:</span> contact@ninavanhoorn.com</p>
+              <p className="text-neutral-600"><span className="text-neutral-900">Contact:</span> contact@contact.com</p>
             </div>
           </motion.div>
         </div>

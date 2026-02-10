@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { assetUrl } from '../lib/assets';
 
 /**
  * Image component with graceful fallback for missing local images.
@@ -18,6 +19,7 @@ interface ArtImageProps extends React.ImgHTMLAttributes<HTMLImageElement> {
 
 export function ArtImage({ src, alt, className = '', style, ...props }: ArtImageProps) {
   const [hasError, setHasError] = useState(false);
+  const resolvedSrc = assetUrl(src);
 
   if (hasError || !src) {
     return (
@@ -38,7 +40,7 @@ export function ArtImage({ src, alt, className = '', style, ...props }: ArtImage
 
   return (
     <img
-      src={src}
+      src={resolvedSrc}
       alt={alt}
       className={className}
       style={style}

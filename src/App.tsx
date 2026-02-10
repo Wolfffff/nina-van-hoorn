@@ -13,6 +13,15 @@ import { allProjects } from './lib/content';
 export default function App() {
   const route = useRoute();
 
+  // Scroll to hash target on initial load (e.g. /#photography)
+  React.useEffect(() => {
+    const hash = window.location.hash.slice(1);
+    if (hash) {
+      const el = document.getElementById(hash);
+      if (el) el.scrollIntoView();
+    }
+  }, []);
+
   const selectedProject = route.page === 'project' && route.slug
     ? allProjects.find(p => p.slug === route.slug) || null
     : null;

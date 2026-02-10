@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useCallback, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { categories } from '../lib/categories';
+import { withBase } from '../lib/router';
 
 export function SectionNav() {
   const [activeSection, setActiveSection] = useState('');
@@ -37,14 +38,15 @@ export function SectionNav() {
 
     // Update URL hash as user scrolls (only after user has actually scrolled)
     if (!hasUserScrolled.current) return;
-    if (current && window.location.pathname === '/') {
+    const homePath = withBase('/');
+    if (current && window.location.pathname === homePath) {
       const currentHash = window.location.hash.replace('#', '');
       if (currentHash !== current) {
-        window.history.replaceState(null, '', `/#${current}`);
+        window.history.replaceState(null, '', `${homePath}#${current}`);
       }
     } else if (!current && window.location.hash && scrollY < 10) {
       // Only strip the hash when user is truly back at the top
-      window.history.replaceState(null, '', '/');
+      window.history.replaceState(null, '', homePath);
     }
   }, []);
 
@@ -62,7 +64,7 @@ export function SectionNav() {
       setActiveSection(slug);
 
       // Update URL hash
-      window.history.replaceState(null, '', `/#${slug}`);
+      window.history.replaceState(null, '', `${withBase('/')}#${slug}`);
 
       // Clear any previous timeout
       if (scrollTimeoutRef.current) clearTimeout(scrollTimeoutRef.current);

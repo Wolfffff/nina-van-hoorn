@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion, useScroll, useMotionValueEvent } from 'motion/react';
-import { navigate } from '../lib/router';
+import { navigate, withBase } from '../lib/router';
 
 interface NavigationProps {
   currentPage: string;
@@ -39,7 +39,7 @@ export function Navigation({ currentPage }: NavigationProps) {
     >
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         <a
-          href="/"
+          href={withBase('/')}
           onClick={(e) => handleClick(e, '/')}
           className="text-xl md:text-2xl uppercase tracking-tight hover:opacity-70 transition-opacity"
         >
@@ -48,7 +48,7 @@ export function Navigation({ currentPage }: NavigationProps) {
 
         <div className="flex gap-6 md:gap-8">
           <a
-            href="/"
+            href={withBase('/')}
             onClick={(e) => handleClick(e, '/')}
             className="text-sm md:text-base uppercase tracking-wide transition-colors"
             style={{ color: currentPage === 'home' ? 'var(--color-accent-red)' : '#a3a3a3' }}
@@ -56,7 +56,7 @@ export function Navigation({ currentPage }: NavigationProps) {
             Work
           </a>
           <a
-            href="/about"
+            href={withBase('/about')}
             onClick={(e) => handleClick(e, '/about')}
             className="text-sm md:text-base uppercase tracking-wide transition-colors"
             style={{ color: currentPage === 'about' ? 'var(--color-accent-red)' : '#a3a3a3' }}

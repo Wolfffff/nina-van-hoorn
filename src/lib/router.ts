@@ -1,13 +1,22 @@
 import { useState, useEffect } from 'react';
 
+const BASE = import.meta.env.BASE_URL.replace(/\/$/, ''); // e.g. '/nina-van-hoorn' or ''
+
 interface RouteMatch {
   page: 'home' | 'about' | 'project';
   slug?: string;
 }
 
+function stripBase(pathname: string): string {
+  return BASE && pathname.startsWith(BASE)
+    ? pathname.slice(BASE.length) || '/'
+    : pathname;
+}
+
 export function parseRoute(pathname: string): RouteMatch {
-  if (pathname === '/about') return { page: 'about' };
-  const projectMatch = pathname.match(/^\/project\/([^/]+)$/);
+  const path = stripBase(pathname);
+  if (path === '/about') return { page: 'about' };
+  const projectMatch = path.match(/^\/project\/([^/]+)$/);
   if (projectMatch) return { page: 'project', slug: projectMatch[1] };
   return { page: 'home' };
 }
@@ -31,8 +40,13 @@ export function useRoute(): RouteMatch {
   return route;
 }
 
+/** Prepend the deploy base path to an app-relative path. */
+export function withBase(path: string): string {
+  return BASE + path;
+}
+
 export function navigate(path: string) {
-  window.history.pushState(null, '', path);
+  window.history.pushState(null, '', BASE + path);
   window.dispatchEvent(new Event('route-change'));
   // Don't scroll to top for project modals — they overlay the current page
   if (!path.startsWith('/project/')) {

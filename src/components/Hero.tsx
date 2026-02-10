@@ -1,7 +1,8 @@
 import React from 'react';
 import { motion } from 'motion/react';
+import { assetUrl } from '../lib/assets';
 
-const heroImage = '/images/hero.png';
+const heroImage = assetUrl('/images/hero.png');
 
 export function Hero() {
   return (

@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { ArtImage } from './ArtImage';
 import { loadProjects, type Project } from '../lib/content';
 import { navigate } from '../lib/router';
+import { assetUrl } from '../lib/assets';
 
 export function About() {
   const [projects, setProjects] = useState<Project[]>([]);
@@ -58,7 +59,7 @@ export function About() {
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
                 <div className="relative overflow-hidden" style={{ height: '100%' }}>
-                  <ArtImage src="/images/portrait.jpeg" alt="Nina van Hoorn" className="w-full h-full object-cover" />
+                  <ArtImage src={assetUrl("/images/portrait.jpeg")} alt="Nina van Hoorn" className="w-full h-full object-cover" />
                 </div>
               </motion.div>
             </div>
@@ -74,7 +75,7 @@ export function About() {
           >
             <div className="about-portrait-float">
               <div className="relative overflow-hidden" style={{ aspectRatio: '3/4' }}>
-                <ArtImage src="/images/portrait.jpeg" alt="Nina van Hoorn" className="w-full h-full object-cover" />
+                <ArtImage src={assetUrl("/images/portrait.jpeg")} alt="Nina van Hoorn" className="w-full h-full object-cover" />
               </div>
             </div>
             <h1 className="text-5xl md:text-7xl uppercase tracking-tight leading-[0.9] mb-4">About</h1>

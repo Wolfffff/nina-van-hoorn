@@ -18,6 +18,8 @@
  *   2. That's it — it will be picked up automatically.
  */
 
+import { assetUrl } from './assets';
+
 export interface Project {
   id: string;
   slug: string;
@@ -132,8 +134,8 @@ export const allProjects: Project[] = Object.entries(projectModules)
       color: data.color || '#000000',
       featured: data.featured,
       order: data.order,
-      thumbnail: data.thumbnail || '',
-      content,
+      thumbnail: assetUrl(data.thumbnail || ''),
+      content: content.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, (_m, alt, src) => `![${alt}](${assetUrl(src)})`),
     };
   })
   .sort((a, b) => {

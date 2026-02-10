@@ -47,9 +47,9 @@ export function Hero() {
               className="space-y-4 ml-0 md:ml-8"
             >
               <div className="bg-white p-6 md:p-8 max-w-lg shadow-xl">
-                <p className="text-2xl md:text-3xl uppercase tracking-tight font-bold mb-4">
+                {/* <p className="text-2xl md:text-3xl uppercase tracking-tight font-bold mb-4">
                   Visual Artist
-                </p>
+                </p> */}
                 <p className="text-base md:text-lg text-neutral-700">
                   Printmaking / Photography / Painting
                 </p>

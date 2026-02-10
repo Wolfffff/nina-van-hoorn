@@ -12,6 +12,7 @@ export function Hero() {
           src={heroImage}
           alt="Nina van Hoorn artwork"
           className="w-full h-full object-cover"
+          decoding="async"
           // @ts-expect-error React 18 uses fetchPriority but DOM wants lowercase
           fetchpriority="high"
         />

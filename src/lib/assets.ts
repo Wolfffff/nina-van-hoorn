@@ -12,3 +12,13 @@ export function thumbUrl(path: string): string {
   return path.replace(/(\.\w+)$/, '-thumb$1');
 }
 
+const preloaded = new Set<string>();
+
+/** Preload an image into the browser cache. */
+export function preloadImage(src: string) {
+  if (!src || preloaded.has(src)) return;
+  preloaded.add(src);
+  const img = new Image();
+  img.src = src;
+}
+

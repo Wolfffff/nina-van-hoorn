@@ -4,9 +4,11 @@ import { navigate, withBase } from '../lib/router';
 
 interface NavigationProps {
   currentPage: string;
+  bw: boolean;
+  onToggleBw: () => void;
 }
 
-export function Navigation({ currentPage }: NavigationProps) {
+export function Navigation({ currentPage, bw, onToggleBw }: NavigationProps) {
   const [isVisible, setIsVisible] = React.useState(true);
   const [lastScrollY, setLastScrollY] = React.useState(0);
   const { scrollY } = useScroll();
@@ -53,7 +55,7 @@ export function Navigation({ currentPage }: NavigationProps) {
           Nina van Hoorn
         </a>
 
-        <div className="flex gap-5">
+        <div className="flex gap-5 items-center">
           <a
             href={withBase('/')}
             onClick={(e) => handleClick(e, '/')}
@@ -90,7 +92,31 @@ export function Navigation({ currentPage }: NavigationProps) {
           >
             About
           </a>
+          <button
+            onClick={onToggleBw}
+            className="bw-toggle"
+            aria-label={bw ? 'Switch to color' : 'Switch to black & white'}
+          >
+            <span className="bw-toggle-label" style={{ opacity: bw ? 1 : 0.4 }}>B&W</span>
+            <span className="bw-toggle-track" style={{ background: bw ? '#d4d4d4' : '#D32F2F' }}>
+              <span className={`bw-toggle-thumb${bw ? '' : ' bw-toggle-thumb--on'}`} />
+            </span>
+            <span className="bw-toggle-label" style={{ opacity: bw ? 0.4 : 1 }}>Color</span>
+          </button>
         </div>
+      </div>
+      <div className="bw-bar">
+        <button
+          onClick={onToggleBw}
+          className="bw-bar-btn"
+          aria-label={bw ? 'Switch to color' : 'Switch to black & white'}
+        >
+          <span style={{ opacity: bw ? 1 : 0.4 }}>B&W</span>
+          <span className="bw-toggle-track" style={{ background: bw ? '#d4d4d4' : '#D32F2F' }}>
+            <span className={`bw-toggle-thumb${bw ? '' : ' bw-toggle-thumb--on'}`} />
+          </span>
+          <span style={{ opacity: bw ? 0.4 : 1 }}>Color</span>
+        </button>
       </div>
     </motion.nav>
   );

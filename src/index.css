@@ -1727,6 +1727,107 @@ html {
   }
 }
 
+/* B&W / Color toggle */
+@property --color-accent-red {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #D32F2F;
+}
+
+.bw-root {
+  transition: --color-accent-red 0.6s ease;
+}
+
+.bw-mode {
+  --color-accent-red: #737373;
+}
+
+.bw-mode img {
+  filter: grayscale(100%);
+}
+
+img {
+  transition: filter 0.6s ease;
+}
+
+.bw-toggle {
+  display: none;
+  align-items: center;
+  gap: 5px;
+  margin-left: 8px;
+  padding-left: 12px;
+  border-left: 1px solid #e5e5e5;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+@media (min-width: 768px) {
+  .bw-toggle {
+    display: flex;
+  }
+}
+
+.bw-toggle-label {
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: #737373;
+  transition: opacity 0.3s;
+  user-select: none;
+}
+
+.bw-bar {
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid #f0f0f0;
+  padding: 4px 0;
+}
+
+@media (min-width: 768px) {
+  .bw-bar {
+    display: none;
+  }
+}
+
+.bw-bar-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #737373;
+  user-select: none;
+}
+
+.bw-toggle-track {
+  position: relative;
+  width: 22px;
+  height: 12px;
+  border-radius: 6px;
+  flex-shrink: 0;
+  transition: background 0.3s ease;
+}
+
+.bw-toggle-thumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.bw-toggle-thumb--on {
+  transform: translateX(10px);
+}
+
 @property --tw-translate-x {
   syntax: "*";
   inherits: false;

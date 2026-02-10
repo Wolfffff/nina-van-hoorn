@@ -8,11 +8,20 @@ import { About } from './components/About';
 import { Timeline } from './components/Timeline';
 import { ProjectDetail } from './components/ProjectDetail';
 import { Footer } from './components/Footer';
-import { useRoute } from './lib/router';
+import { useRoute, navigate } from './lib/router';
 import { allProjects } from './lib/content';
+import { preloadImage } from './lib/assets';
 
 export default function App() {
   const route = useRoute();
+  const [bw, setBw] = React.useState(true);
+
+  // Remember the last non-project page so the modal overlays the correct background
+  const backgroundPage = React.useRef<string>('home');
+  if (route.page !== 'project') {
+    backgroundPage.current = route.page;
+  }
+  const activePage = route.page === 'project' ? backgroundPage.current : route.page;
 
   // Scroll to hash target on initial load (e.g. /#photography)
   React.useEffect(() => {
@@ -23,21 +32,46 @@ export default function App() {
     }
   }, []);
 
+  // Background-preload all full-size project thumbnails once page is idle
+  React.useEffect(() => {
+    const id = setTimeout(() => {
+      allProjects.forEach(p => preloadImage(p.thumbnail));
+    }, 2000);
+    return () => clearTimeout(id);
+  }, []);
+
   const selectedProject = route.page === 'project' && route.slug
     ? allProjects.find(p => p.slug === route.slug) || null
     : null;
 
+  // Track whether we have in-app history to go back to
+  const hasHistory = React.useRef(false);
+  React.useEffect(() => {
+    const onNav = () => { hasHistory.current = true; };
+    window.addEventListener('route-change', onNav);
+    return () => window.removeEventListener('route-change', onNav);
+  }, []);
+  React.useEffect(() => {
+    const onPop = () => { hasHistory.current = true; };
+    window.addEventListener('popstate', onPop);
+    return () => window.removeEventListener('popstate', onPop);
+  }, []);
+
   const handleCloseProject = () => {
-    window.history.back();
+    if (hasHistory.current) {
+      window.history.back();
+    } else {
+      navigate('/');
+    }
   };
 
   return (
-    <div className="min-h-screen bg-white">
-      <Navigation currentPage={route.page === 'about' ? 'about' : route.page === 'timeline' ? 'timeline' : 'home'} />
+    <div className={`min-h-screen bg-white bw-root${bw ? ' bw-mode' : ''}`}>
+      <Navigation currentPage={activePage === 'about' ? 'about' : activePage === 'timeline' ? 'timeline' : 'home'} bw={bw} onToggleBw={() => setBw(v => !v)} />
 
-      {route.page === 'about' ? (
+      {activePage === 'about' ? (
         <About />
-      ) : route.page === 'timeline' ? (
+      ) : activePage === 'timeline' ? (
         <Timeline />
       ) : (
         <>

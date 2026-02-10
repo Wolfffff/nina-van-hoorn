@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'motion/react';
-import { assetUrl, thumbUrl } from '../lib/assets';
+import { assetUrl, thumbUrl, preloadImage } from '../lib/assets';
 
 interface Project {
   id: string;
@@ -26,6 +26,7 @@ export function ProjectCard({ project, index, onClick }: ProjectCardProps) {
       transition={{ duration: 0.7, delay: index * 0.08, ease: [0.25, 0.1, 0.25, 1] }}
       className="group cursor-pointer"
       onClick={onClick}
+      onPointerEnter={() => preloadImage(project.thumbnail)}
       style={{ height: '100%' }}
     >
       <div className="relative overflow-hidden bg-neutral-50" style={{ height: '100%' }}>
@@ -34,10 +35,11 @@ export function ProjectCard({ project, index, onClick }: ProjectCardProps) {
           alt={project.title}
           className="w-full h-full object-cover"
           loading="lazy"
+          decoding="async"
         />
 
         {/* Hover overlay */}
-        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/50 group-hover:backdrop-blur-sm transition-all duration-500 ease-out flex items-end justify-start p-6 md:p-8">
+        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-500 ease-out flex items-end justify-start p-6 md:p-8">
           <div className="translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-500 ease-out">
             <p className="text-white/70 text-xs uppercase tracking-[0.2em] mb-1">
               {project.year}

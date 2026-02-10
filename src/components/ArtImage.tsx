@@ -45,6 +45,7 @@ export function ArtImage({ src, alt, className = '', style, ...props }: ArtImage
       onLoad={() => setLoaded(true)}
       onError={() => setHasError(true)}
       loading="lazy"
+      decoding="async"
       {...props}
     />
   );

@@ -15,7 +15,7 @@ export const categories: CategoryInfo[] = [
   {
     name: 'Drawing',
     slug: 'drawing',
-    image: assetUrl(thumbUrl('/images/projects/sketchbook/full-spread.jpg')),
+    image: assetUrl(thumbUrl('/images/projects/sketchbook/portrait-studies.jpg')),
   },
   {
     name: 'Mixed Media',

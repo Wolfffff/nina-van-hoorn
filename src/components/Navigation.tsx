@@ -41,7 +41,14 @@ export function Navigation({ currentPage }: NavigationProps) {
         <a
           href={withBase('/')}
           onClick={(e) => handleClick(e, '/')}
-          className="text-sm uppercase tracking-[0.2em] text-neutral-600 hover:text-[var(--color-accent-red)] transition-colors"
+          className="text-sm uppercase tracking-[0.2em] text-neutral-600 hover:text-[var(--color-accent-red)] transition-colors leading-tight mobile-only"
+        >
+          Nina<br />van Hoorn
+        </a>
+        <a
+          href={withBase('/')}
+          onClick={(e) => handleClick(e, '/')}
+          className="text-sm uppercase tracking-[0.2em] text-neutral-600 hover:text-[var(--color-accent-red)] transition-colors desktop-only"
         >
           Nina van Hoorn
         </a>
@@ -50,16 +57,36 @@ export function Navigation({ currentPage }: NavigationProps) {
           <a
             href={withBase('/')}
             onClick={(e) => handleClick(e, '/')}
-            className="text-xs uppercase tracking-[0.2em] transition-colors"
-            style={{ color: currentPage === 'home' ? 'var(--color-accent-red)' : '#737373', fontWeight: 400 }}
+            className="text-xs uppercase tracking-[0.2em] transition-colors pb-1"
+            style={{
+              color: '#737373',
+              fontWeight: 400,
+              borderBottom: currentPage === 'home' ? '2px solid var(--color-accent-red)' : '2px solid transparent',
+            }}
           >
-            Work
+            Home
+          </a>
+          <a
+            href={withBase('/timeline')}
+            onClick={(e) => handleClick(e, '/timeline')}
+            className="text-xs uppercase tracking-[0.2em] transition-colors pb-1"
+            style={{
+              color: '#737373',
+              fontWeight: 400,
+              borderBottom: currentPage === 'timeline' ? '2px solid var(--color-accent-red)' : '2px solid transparent',
+            }}
+          >
+            Timeline
           </a>
           <a
             href={withBase('/about')}
             onClick={(e) => handleClick(e, '/about')}
-            className="text-xs uppercase tracking-[0.2em] transition-colors"
-            style={{ color: currentPage === 'about' ? 'var(--color-accent-red)' : '#737373', fontWeight: 400 }}
+            className="text-xs uppercase tracking-[0.2em] transition-colors pb-1"
+            style={{
+              color: '#737373',
+              fontWeight: 400,
+              borderBottom: currentPage === 'about' ? '2px solid var(--color-accent-red)' : '2px solid transparent',
+            }}
           >
             About
           </a>

@@ -1,8 +1,8 @@
 ---
 title: "Architecture Photography"
 category: "Photography"
-year: "2024"
-date: "2024"
+year: "2025"
+date: "2025"
 color: "#D32F2F"
 featured: true
 order: 9

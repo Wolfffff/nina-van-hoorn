@@ -1272,6 +1272,26 @@
   }
 
   @media (hover: hover) {
+    .group-hover\:bg-black\/50:is(:where(.group):hover *) {
+      background-color: #00000080;
+    }
+
+    @supports (color: color-mix(in lab, red, red)) {
+      .group-hover\:bg-black\/50:is(:where(.group):hover *) {
+        background-color: color-mix(in oklab, var(--color-black) 50%, transparent);
+      }
+    }
+  }
+
+  @media (hover: hover) {
+    .group-hover\:backdrop-blur-sm:is(:where(.group):hover *) {
+      --tw-backdrop-blur: blur(var(--blur-sm));
+      -webkit-backdrop-filter: var(--tw-backdrop-blur, ) var(--tw-backdrop-brightness, ) var(--tw-backdrop-contrast, ) var(--tw-backdrop-grayscale, ) var(--tw-backdrop-hue-rotate, ) var(--tw-backdrop-invert, ) var(--tw-backdrop-opacity, ) var(--tw-backdrop-saturate, ) var(--tw-backdrop-sepia, );
+      backdrop-filter: var(--tw-backdrop-blur, ) var(--tw-backdrop-brightness, ) var(--tw-backdrop-contrast, ) var(--tw-backdrop-grayscale, ) var(--tw-backdrop-hue-rotate, ) var(--tw-backdrop-invert, ) var(--tw-backdrop-opacity, ) var(--tw-backdrop-saturate, ) var(--tw-backdrop-sepia, );
+    }
+  }
+
+  @media (hover: hover) {
     .group-hover\:opacity-100:is(:where(.group):hover *) {
       opacity: 1;
     }
@@ -1640,6 +1660,71 @@ html {
 
 .bottom-20 {
   bottom: 5rem;
+}
+
+/* Timeline */
+.timeline-timeline {
+  position: relative;
+  padding-left: 48px;
+}
+
+.timeline-timeline-line {
+  position: absolute;
+  left: 5px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: #e5e5e5;
+}
+
+.timeline-year-group {
+  position: relative;
+  margin-bottom: 48px;
+}
+
+.timeline-year-dot {
+  position: absolute;
+  left: -48px;
+  top: 6px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--color-accent-red);
+}
+
+.timeline-year-label {
+  font-size: clamp(3rem, 8vw, 5rem);
+  font-weight: 900;
+  letter-spacing: -0.05em;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.05);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.timeline-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 12px;
+}
+
+@media (min-width: 768px) {
+  .timeline-timeline {
+    padding-left: 72px;
+  }
+
+  .timeline-year-dot {
+    left: -72px;
+  }
+
+  .timeline-projects-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+
+  .timeline-year-group {
+    margin-bottom: 72px;
+  }
 }
 
 @property --tw-translate-x {

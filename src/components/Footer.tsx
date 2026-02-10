@@ -1,4 +1,3 @@
-import { navigate, withBase } from '../lib/router';
 import { BackToTop } from './BackToTop';
 
 
@@ -12,13 +11,6 @@ export function Footer() {
             &copy; 2026 Nina van Hoorn. All rights reserved.
           </p>
           <div className="flex items-center gap-6 md:gap-8">
-            <a
-              href={withBase('/archive')}
-              onClick={(e) => { e.preventDefault(); navigate('/archive'); }}
-              className="text-sm uppercase tracking-[0.15em] text-neutral-500 hover:text-[var(--color-accent-red)] transition-colors duration-300"
-            >
-              Archive
-            </a>
             <a
               href="https://instagram.com/ninavanhoorn"
               target="_blank"

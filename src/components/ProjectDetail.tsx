@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'motion/react';
+import { motion, useDragControls } from 'motion/react';
 import { X } from 'lucide-react';
 import type { Project } from '../lib/content';
 import { preloadImage } from '../lib/assets';
@@ -67,6 +67,8 @@ function parseMarkdownBlocks(content: string): Array<
 }
 
 export function ProjectDetail({ project, onClose }: ProjectDetailProps) {
+  const dragControls = useDragControls();
+
   React.useEffect(() => {
     document.body.style.overflow = 'hidden';
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -110,8 +112,24 @@ export function ProjectDetail({ project, onClose }: ProjectDetailProps) {
       animate={{ y: 0 }}
       exit={{ y: '100%' }}
       transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+      drag="y"
+      dragControls={dragControls}
+      dragListener={false}
+      dragConstraints={{ top: 0, bottom: 0 }}
+      dragElastic={{ top: 0, bottom: 0.4 }}
+      onDragEnd={(_, info) => {
+        if (info.offset.y > 120 || info.velocity.y > 400) onClose();
+      }}
       className="fixed inset-0 z-50 bg-white overflow-y-auto"
     >
+      {/* Drag handle (mobile) */}
+      <div
+        className="drag-handle"
+        onPointerDown={(e) => dragControls.start(e)}
+      >
+        <div className="drag-handle-bar" />
+      </div>
+
       {/* Close button */}
       <button
         onClick={onClose}

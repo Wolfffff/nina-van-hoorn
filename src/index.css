@@ -1804,6 +1804,31 @@ img {
   user-select: none;
 }
 
+.drag-handle {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0 2px;
+  cursor: grab;
+  touch-action: none;
+}
+
+.drag-handle:active {
+  cursor: grabbing;
+}
+
+.drag-handle-bar {
+  width: 36px;
+  height: 4px;
+  border-radius: 2px;
+  background: #d4d4d4;
+}
+
+@media (min-width: 768px) {
+  .drag-handle {
+    display: none;
+  }
+}
+
 .bw-toggle-track {
   position: relative;
   width: 22px;
